@@ -51,7 +51,8 @@ class CustomData:
                 'Sex':[self.Sex],
                 'Age':[self.Age],
                 'SibSp':[self.SibSp],
-                'Parch':[self.Parch]                
+                'Parch':[self.Parch],
+                'Fare':[self.Fare]    
             }
             df = pd.DataFrame(custom_data_input_dict)
             logging.info('Dataframe Gathered')
