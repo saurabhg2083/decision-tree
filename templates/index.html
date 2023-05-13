@@ -26,59 +26,60 @@
 
                 <form action="{{url_for('predict_datapoint')}}" method="POST">
                     <div class="row" style="margin-bottom: 3px;">
-                        <div class="form-group">
-                            <label for="Pclass" class="col-sm-3 col-form-label">Pclass:</label>
-                            <div class="col-sm-3">
-                                <select required id="Pclass" class="form-control" name="Pclass">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="Pclass" class="col-sm-3 col-form-label">Pclass:</label>
+                                <select required id="Pclass" class="form-control col-sm-3" name="Pclass">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 3px;">
-                            <label for="Sex" class="col-sm-3 col-form-label">Sex:</label>
-                            <div class="col-sm-3">
-                                <select required id="Sex" class="form-control" name="Sex">
+
+                            <div class="form-group">
+                                <label for="Sex" class="col-sm-3 col-form-label">Sex:</label>
+
+                                <select required id="Sex" class="form-control col-sm-3" name="Sex">
                                     <option value="female">female</option>
                                     <option value="male">male</option>
                                 </select>
                             </div>
-                        </div>
-                    </div>
 
 
-                    <div class="row" style="margin-bottom: 3px;">
-                        <div class="form-group">
-                            <label for="Age" class="col-sm-3 col-form-label">Age:</label>
-                            <div class="col-sm-3">
-                                <input type="text" required id="Age" class="form-control" name="Age"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                            <div class="form-group">
+                                <label for="Age" class="col-sm-3 col-form-label">Age:</label>
+                                <input type="text" required id="Age" class="form-control col-sm-3" name="Age"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                             </div>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 3px;">
-                            <label for="SibSp" class="col-sm-3 col-form-label">SibSp:</label>
-                            <div class="col-sm-3">
-                                <input type="text" required id="SibSp" class="form-control" name="SibSp"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row" style="margin-bottom: 3px;">
-                        <div class="form-group">
-                            <label for="Parch" class="col-sm-3 col-form-label">Parch:</label>
-                            <div class="col-sm-3">
-                                <input type="text" required id="Parch" class="form-control" name="Parch"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+
+                            <div class="form-group">
+                                <label for="SibSp" class="col-sm-3 col-form-label">SibSp:</label>
+                                <input type="text" required id="SibSp" class="form-control col-sm-3" name="SibSp"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                             </div>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 3px;">
-                            <label for="Fare" class="col-sm-3 col-form-label">Fare:</label>
-                            <div class="col-sm-3">
-                                <input type="text" required id="Fare" class="form-control" name="Fare"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+
+
+
+
+
+
+
+                            <div class="form-group">
+                                <label for="Parch" class="col-sm-3 col-form-label">Parch:</label>
+
+                                <input type="text" required id="Parch" class="form-control col-sm-3" name="Parch"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+
                             </div>
+                            <div class="form-group">
+                                <label for="Fare" class="col-sm-3 col-form-label">Fare:</label>
+
+                                <input type="text" required id="Fare" class="form-control col-sm-3" name="Fare"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -86,7 +87,7 @@
 
 
                     <div class="form-group row" style="margin-bottom: 3px;">
-                        <div class="col-sm-1 offset-md-11">
+                        <div class="col-sm-1 offset-md-2">
                             <input type="submit" class="btn btn-primary" value="Submit">
                         </div>
                     </div>
