@@ -29,6 +29,7 @@ class DataIngestion:
             data_url = "https://raw.githubusercontent.com/BigDataGal/Python-for-Data-Science/master/titanic-train.csv"
             df = pd.read_csv(data_url)
 
+
             #df = pd.DataFrame(data_url,columns=names_col)
             #df['Targets'] = df['Survived']
             #df.replace(to_replace=' ?', value='', inplace=True)

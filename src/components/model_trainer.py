@@ -28,23 +28,17 @@ class ModelTrainer:
     def initate_model_training(self,train_array,test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
-            X_train = train_array.drop(['Survived'],axis=1)
-            y_train = train_array['Survived']
-
-            X_test = test_array.drop(['Survived'],axis=1)
-            y_test = test_array['Survived']
-
-            """
+           
             X_train, y_train, X_test, y_test = (
                 train_array[:,:-1],
                 train_array[:,-1],
                 test_array[:,:-1],
                 test_array[:,-1]
             )
-            """
-
+           
+            #'LogisticRegression':LogisticRegression(),
             models={
-            'LogisticRegression':LogisticRegression(),
+            
             'RandomForestRegressor':DecisionTreeClassifier(),
             'DecisionTreeClassifier_BestParams':DecisionTreeClassifier(criterion = 'entropy', max_depth =4, min_samples_leaf= 6,min_samples_split=7, splitter ='random')               
         }
@@ -63,9 +57,9 @@ class ModelTrainer:
             
             best_model = models[best_model_name]
 
-            print(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
+            print(f'Best Model Found , Model Name : {best_model_name} , Score : {best_model_score}')
             print('\n====================================================================================\n')
-            logging.info(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
+            logging.info(f'Best Model Found , Model Name : {best_model_name} ,Score : {best_model_score}')
 
             save_object(
                  file_path=self.model_trainer_config.trained_model_file_path,
